@@ -44,18 +44,30 @@ class CuentaBancaria_2 {
     set saldo(nuevoSaldo) {
         if (nuevoSaldo < 0) {
             console.log("El saldo no puede ser negativo.");
-        } else {
-            this.#saldo = nuevoSaldo;
-        }
+        } 
     }
+
 
     depositar(monto){
         if(monto <= 0){
-            console.log("Fondos insuficientes");
+            console.log("El monto a depositar debe ser mayor a 0");
             return;
         }
         this.#saldo += monto;
         console.log(`Se depositaron $${monto} en tu cuenta privada. Nuevo saldo: $${this.#saldo}`);
+    }
+
+    extraer(monto){
+        if(monto <= 0){
+            console.log("El monto a extraer debe ser mayor a 0");
+            return;
+        }
+        if(this.#saldo >= monto){
+            this.#saldo -= monto;
+            console.log(`Se extrajeron $${monto} de tu cuenta privada. Nuevo saldo: $${this.#saldo}`);
+        } else {
+            console.log("Fondos insuficientes");
+        }
     }
     
     consultarSaldo(){
@@ -66,6 +78,10 @@ class CuentaBancaria_2 {
 }
 const cuenta2 = new CuentaBancaria_2("Emilio", 1000);
 
-cuenta2.depositar(500)
-cuenta2.saldo = 2000; 
-cuenta2.consultarSaldo()  
+
+cuenta2.consultarSaldo()             
+cuenta2.depositar(500)                
+cuenta2.extraer(200)                 
+cuenta2.consultarSaldo()              
+cuenta2.saldo = 2000;                 
+            
