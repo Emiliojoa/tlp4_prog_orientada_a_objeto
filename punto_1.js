@@ -36,6 +36,9 @@ class CuentaBancaria_2 {
     constructor(titular, saldoInicial) {
         this.titular = titular;
         this.#saldo = saldoInicial;
+        if(saldoInicial <0){
+            throw new Error("El saldo inicial no puede ser negativo.");
+        }
     }
     get saldo() {
         return this.#saldo;
