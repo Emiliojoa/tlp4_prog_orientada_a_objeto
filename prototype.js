@@ -1,11 +1,9 @@
-console.log(String);
-Object.assign(String.prototype, {
-    concatenarPalabras(palabra) {
-        console.log(`Este es un método personalizado para strings: ${this} ${palabra}`);
-    }
-});
+
+String.prototype.concatenarPalabra = function(palabra) {
+    console.log(`Este es un método personalizado para strings: ${this} ${palabra}`);
+};
 
 const halago = "soy alto"
-const todo = halago.concatenarPalabras("programador");
+const todo = halago.concatenarPalabra("programador");
 
 console.log(todo); 
