@@ -1,0 +1,24 @@
+## ¿Qué diferencias, ventajas y desventajas encontrás entre usar funciones constructoras con prototype y usar class?
+```
+la diferencias que encuentro son principalmente la sintaxis que utilizan cada uno, para mi la mas legible y entendible es utilizando class. Como 
+Ventajas:prototype
+nos da una flexibilidad para manipular los prototipos directamente y esto nos permite añadir metodos en cualquier momento.
+ Desventajas:prototype
+ su sintaxis me parece un poco complicada porque me parece un poco dificil de compreder.
+
+ Ventajas: class
+ la sintaxis es muy clara a la hora de realizarlo, la forma de utilizar los metodos, setter y getter me parecen muy sencillos.
+ Desventajas:
+ por mi experiencia me fallo en algunos tipos de servidores, por eso lo tomo como desventaja.
+```
+
+
+## ¿Cuáles son las ventajas de usar getters y setters?
+```
+con getter y setter podemos modificar atributos de forma controlada en lugar de cambiarlo directamente con un console.log().
+permiten encapsular datos gracias a esto protegemos los atributos internos de un objeto para que no puedan ser modificados o consultados de forma insegura. Gracias a esto facilitamos la integridad de los datos.
+
+```
+
+## ¿Qué problemas pueden surgir al modificar prototipos nativos como String?
+## Teniendo en cuenta un objeto personPrototype que contiene un método greet, ¿qué diferencias encontrás entre asignar ese método directamente al prototype de una función constructora o usar Object.assign?
